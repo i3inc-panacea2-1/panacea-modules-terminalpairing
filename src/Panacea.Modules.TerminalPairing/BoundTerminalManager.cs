@@ -30,15 +30,15 @@ namespace Panacea.Modules.TerminalPairing
         public async void connect()
         {
 
-            if (TerminalInfo.Terminal != null)
+            if (TerminalInfo.BoundTerminal != null)
             {
                 if (TerminalInfo.Relation == TerminalRelation.Master)
                 {
-                    BoundTerminal = new Master(TerminalInfo.Terminal.Name, TerminalInfo.Terminal.Ip, _serializer);
+                    BoundTerminal = new Master(TerminalInfo.BoundTerminal.Name, TerminalInfo.BoundTerminal.Ip, _serializer);
                 }
                 else
                 {
-                    BoundTerminal = new Slave(TerminalInfo.Terminal.Name, TerminalInfo.Terminal.Ip, _serializer);
+                    BoundTerminal = new Slave(TerminalInfo.BoundTerminal.Name, TerminalInfo.BoundTerminal.Ip, _serializer);
                 }
                 await BoundTerminal.TryConnect();
             }

@@ -61,8 +61,6 @@ namespace Panacea.Modules.TerminalPairing
             {
 
             }
-
-
         }
     }
 }

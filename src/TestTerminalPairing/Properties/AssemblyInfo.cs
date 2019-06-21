@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TerminalPairingTest")]
+[assembly: AssemblyTitle("TestTerminalPairing")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TerminalPairingTest")]
+[assembly: AssemblyProduct("TestTerminalPairing")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9b0c71d3-c8b3-456a-97d0-2520795b57b9")]
+[assembly: Guid("0ae9b6f9-46dc-4316-ab2f-921d923104f5")]
 
 // Version information for an assembly consists of the following four values:
 //
