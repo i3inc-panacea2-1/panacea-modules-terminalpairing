@@ -25,9 +25,10 @@ namespace Panacea.Modules.TerminalPairing
 
         public bool IsBound()
         {
-            return BoundTerminal != null;
+            return TerminalInfo.BoundTerminal != null;
         }
-        public async void connect()
+
+        public async void Connect()
         {
 
             if (TerminalInfo.BoundTerminal != null)

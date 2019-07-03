@@ -23,10 +23,29 @@ namespace Panacea.Modules.TerminalPairing
         }
         public async Task BeginInit()
         {
-            TerminalInfoResponse terminalInfo= await GetSettingsAsync();
-            BoundTerminalManager = new BoundTerminalManager(this._core.Serializer, terminalInfo);
-            return;// Task.CompletedTask;
+            await InitializeAsync();
         }
+
+        private async Task InitializeAsync()
+        {
+            var success = false;
+            while (!success)
+            {
+                try
+                {
+                    TerminalInfoResponse terminalInfo = await GetSettingsAsync();
+                    BoundTerminalManager = new BoundTerminalManager(this._core.Serializer, terminalInfo);
+                    BoundTerminalManager.Connect();
+                    success = true;
+                }
+                catch (Exception ex)
+                {
+                    _core.Logger.Error(this, ex.Message);
+                    await Task.Delay(5000);
+                }
+            }
+        }
+
         public Task EndInit()
         {
             return Task.CompletedTask;
