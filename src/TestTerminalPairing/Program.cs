@@ -20,8 +20,8 @@ namespace TestTerminalPairing
             PanaceaSerializer serializer = new PanaceaSerializer();
             BoundTerminalManager MasterManager = CreateMaster(serializer);
             BoundTerminalManager SlaveManager = CreateSlave(serializer);
-            MasterManager.connect();
-            SlaveManager.connect();
+            MasterManager.Connect();
+            SlaveManager.Connect();
             MasterManager.GetBoundTerminal().Connected += Master_Connected;
             SlaveManager.GetBoundTerminal().Connected += Slave_Connected;
             Console.ReadLine();
